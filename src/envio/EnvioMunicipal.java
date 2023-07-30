@@ -1,9 +1,13 @@
-public class EnvioMunicipal extends Envio{
-    final int tiempoEnvio = 12;
-    final boolean permitidoEnAvion = true;
+package envio;
 
-    EnvioMunicipal(Integer precio) {
-        super(precio);
+import logica.IEnvio;
+
+public class EnvioMunicipal implements IEnvio{
+
+    private Integer precio;
+
+    public EnvioMunicipal(Integer precio) {
+        this.precio = precio;
     }
 
     @Override
@@ -19,18 +23,18 @@ public class EnvioMunicipal extends Envio{
     }
 
     @Override
-    public void saveEnvioDB(Envio envio) {
-        // Guardando Envio en base de datos
-        System.out.println("Guardando Envio en base de datos");
-    }
-
-    @Override
     public void printTiempoEnvio() {
+        int tiempoEnvio = 12;
         System.out.println("Tiempo Envio: " + tiempoEnvio + " horas");
     }
 
     @Override
     public boolean permitidoEnAvion() {
-        return permitidoEnAvion;
+        return false;
+    }
+
+    @Override
+    public Integer getPrecio() {
+        return this.precio;
     }
 }

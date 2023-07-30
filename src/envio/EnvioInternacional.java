@@ -1,8 +1,13 @@
-public class EnvioInternacional extends Envio{
-    final int tiempoEnvio = 190;
-    final boolean permitidoEnAvion = true;
-    EnvioInternacional(Integer precio) {
-        super(precio);
+package envio;
+
+import logica.IEnvio;
+
+public class EnvioInternacional implements IEnvio{
+
+    private Integer precio;
+
+    public EnvioInternacional(Integer precio) {
+        this.precio = precio;
     }
 
     @Override
@@ -18,19 +23,18 @@ public class EnvioInternacional extends Envio{
     }
 
     @Override
-    public void saveEnvioDB(Envio envio) {
-        // Guardando Envio en base de datos
-        System.out.println("Guardando Envio en base de datos");
-
-    }
-
-    @Override
     public void printTiempoEnvio() {
+        int tiempoEnvio = 190;
         System.out.println("Tiempo Envio: " + tiempoEnvio + " horas");
     }
 
     @Override
     public boolean permitidoEnAvion() {
-        return permitidoEnAvion;
+        return true;
+    }
+
+    @Override
+    public Integer getPrecio() {
+        return this.precio;
     }
 }

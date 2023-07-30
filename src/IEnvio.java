@@ -4,5 +4,9 @@ public interface IEnvio {
 
   void rastrearPaquete();
 
+  void saveEnvioDB(Envio envio);
+
+  void printTiempoEnvio();
+
   boolean permitidoEnAvion();
 }

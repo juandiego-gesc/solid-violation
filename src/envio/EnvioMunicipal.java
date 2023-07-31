@@ -13,13 +13,13 @@ public class EnvioMunicipal implements IEnvio{
     @Override
     public void cargarMercancia() {
         // Cargando Mercancia
-        System.out.println("Cargando Mercancia");
+        System.out.println("Cargando Mercancia Municipal");
     }
 
     @Override
     public void rastrearPaquete() {
         // Rastreando Paquete
-        System.out.println("Rastreando Paquete");
+        System.out.println("Rastreando Paquete Municipal");
     }
 
     @Override

@@ -13,13 +13,13 @@ public class EnvioInternacional implements IEnvio{
     @Override
     public void cargarMercancia() {
         // Cargando Mercancia
-        System.out.println("Cargando Mercancia");
+        System.out.println("Cargando Mercancia Internacional");
     }
 
     @Override
     public void rastrearPaquete() {
         // Rastreando Paquete
-        System.out.println("Rastreando Paquete");
+        System.out.println("Rastreando Paquete Internacional");
     }
 
     @Override
@@ -30,7 +30,8 @@ public class EnvioInternacional implements IEnvio{
 
     @Override
     public boolean permitidoEnAvion() {
-        return true;
+        boolean precioAceptable = this.precio < 100;
+        return precioAceptable;
     }
 
     @Override

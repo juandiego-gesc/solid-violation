@@ -20,7 +20,7 @@ public class LogicaEnvios {
 
   public void imprimirTiempoDeEnvio(){
     for (IEnvio envio : this.envios) {
-        envio.printTiempoEnvio();
+      System.out.println("Tiempo Envio: " + envio.getTiempoEnvio() + " horas");
     }
   }
 }

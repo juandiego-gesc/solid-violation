@@ -4,7 +4,9 @@ import logica.IEnvio;
 
 public class EnvioInternacional implements IEnvio{
 
-    private Integer precio;
+    private final Integer precio;
+    private final int tiempoEnvio = 190;
+    private final String tipo = "Internacional";
 
     public EnvioInternacional(Integer precio) {
         this.precio = precio;
@@ -23,9 +25,8 @@ public class EnvioInternacional implements IEnvio{
     }
 
     @Override
-    public void printTiempoEnvio() {
-        int tiempoEnvio = 190;
-        System.out.println("Tiempo Envio: " + tiempoEnvio + " horas");
+    public int getTiempoEnvio() {
+        return tiempoEnvio;
     }
 
     @Override
@@ -37,5 +38,10 @@ public class EnvioInternacional implements IEnvio{
     @Override
     public Integer getPrecio() {
         return this.precio;
+    }
+
+    @Override
+    public String getTipo() {
+        return tipo;
     }
 }

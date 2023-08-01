@@ -1,6 +1,5 @@
 package main;
 
-import logica.IEnvio;
 import logica.LogicaEnvios;
 import envio.*;
 

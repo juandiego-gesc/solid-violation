@@ -1,6 +1,6 @@
 package logica;
 
-public interface IEnvio {
+public interface Envio {
 
   void cargarMercancia();
 
@@ -8,9 +8,9 @@ public interface IEnvio {
   
   boolean permitidoEnAvion();
 
-  int getTiempoEnvio();
+  int obtenerTiempoEnvio();
   
-  Integer getPrecio();
+  Integer obtenerPrecio();
 
-  String getTipo();
+  String obtenerTipo();
 }

@@ -1,12 +1,10 @@
 package envio;
 
-import logica.IEnvio;
+import logica.Envio;
 
-public class EnvioInternacional implements IEnvio{
+public class EnvioInternacional implements Envio {
 
     private final Integer precio;
-    private final int tiempoEnvio = 190;
-    private final String tipo = "Internacional";
 
     public EnvioInternacional(Integer precio) {
         this.precio = precio;
@@ -25,23 +23,22 @@ public class EnvioInternacional implements IEnvio{
     }
 
     @Override
-    public int getTiempoEnvio() {
-        return tiempoEnvio;
+    public int obtenerTiempoEnvio() {
+        return 190;
     }
 
     @Override
     public boolean permitidoEnAvion() {
-        boolean precioAceptable = this.precio < 100;
-        return precioAceptable;
+        return this.precio < 100;
     }
 
     @Override
-    public Integer getPrecio() {
+    public Integer obtenerPrecio() {
         return this.precio;
     }
 
     @Override
-    public String getTipo() {
-        return tipo;
+    public String obtenerTipo() {
+        return "Internacional";
     }
 }

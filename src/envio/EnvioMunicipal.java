@@ -1,12 +1,10 @@
 package envio;
 
-import logica.IEnvio;
+import logica.Envio;
 
-public class EnvioMunicipal implements IEnvio{
+public class EnvioMunicipal implements Envio {
 
     private final Integer precio;
-    private final int tiempoEnvio = 12;
-    private final String tipo = "Municipal";
 
     public EnvioMunicipal(Integer precio) {
         this.precio = precio;
@@ -25,8 +23,8 @@ public class EnvioMunicipal implements IEnvio{
     }
 
     @Override
-    public int getTiempoEnvio() {
-        return tiempoEnvio;
+    public int obtenerTiempoEnvio() {
+        return 12;
     }
 
     @Override
@@ -35,12 +33,12 @@ public class EnvioMunicipal implements IEnvio{
     }
 
     @Override
-    public Integer getPrecio() {
+    public Integer obtenerPrecio() {
         return this.precio;
     }
 
     @Override
-    public String getTipo() {
-        return tipo;
+    public String obtenerTipo() {
+        return "Municipal";
     }
 }

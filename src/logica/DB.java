@@ -1,6 +1,6 @@
 package logica;
 
 public interface DB {
-    void saveEnvioDB(IEnvio envio);
+    void guardarEnvioDB(Envio envio);
 
 }

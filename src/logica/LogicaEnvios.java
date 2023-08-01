@@ -6,21 +6,21 @@ import java.util.List;
 public class LogicaEnvios {
 
   private final DB db;
-  List<IEnvio> envios;
+  List<Envio> envios;
 
   public LogicaEnvios(DB db) {
     this.db = db;
     envios = new ArrayList<>();
   }
 
-  public void crearEnvio(IEnvio envio) {
+  public void crearEnvio(Envio envio) {
     envios.add(envio);
-    this.db.saveEnvioDB(envio);
+    this.db.guardarEnvioDB(envio);
   }
 
   public void imprimirTiempoDeEnvio(){
-    for (IEnvio envio : this.envios) {
-      System.out.println("Tiempo Envio: " + envio.getTiempoEnvio() + " horas");
+    for (Envio envio : this.envios) {
+      System.out.println("Tiempo Envio: " + envio.obtenerTiempoEnvio() + " horas");
     }
   }
 }
